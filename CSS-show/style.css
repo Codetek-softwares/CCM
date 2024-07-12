@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fa5b5b;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.test
+{
+text-align: left;
+}
+
+.test1{
+    text-align: right;
+    float: right;
+    margin-right: 3%;
+}
+.test2{
+    margin-top: -1%;
+}
+
+main {
+    padding: 20px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.movie {
+    background-color: #fff;
+    margin: 11px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.829);
+    width: 200px;
+    text-align: center;
+}
+.movie img 
+{
+    max-width: 100%;
+}
+
+.movie-details {
+    padding: 0px 0;
+}
+/* slide show */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1558px;
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} */
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #5b5b5bae;
+    padding: 30px;
+    border-radius: 45px;
+    text-align: center;
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    color: #4b8aef;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #1e1e1e1c;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.google {
+    
+    color: #ffffff00;
+}
+
+.email {
+    
+    color: #fff;
+}
+
+.apple {
+    
+    color: #fff;
+}
+
+.mobile {
+    background-color: #b0efbed2;
+    color: #fff;
+}
+
+.social-button img {
+    margin-right: 0px;
+}
+
+.divider {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #888;
+}
+
+p {
+    font-size: 12px;
+    color: #454444;
+}
+
+p a {
+    color: #4285F4;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+footer {
+    background-color: #fa5b5b;
+    color: #b8b1b1;
+    text-align: center;
+    padding: 10px ;
+    position: absolute;
+    bottom: -102%;
+    width: 100%;
+}
+.icons a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    transition: color 0.3s;
+    font-size: 150%;
+}
+.icons a:hover {
+    color: #007bff;
+}

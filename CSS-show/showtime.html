@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SHOW</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #fa5b5b;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .test {
+            text-align: left;
+        }
+
+        .test1 {
+            text-align: right;
+            float: right;
+            margin-right: 3%;
+        }
+
+        .test2 {
+            margin-top: -1%;
+        }
+
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 2%;
+            margin-top: 4%;
+        }
+
+        .movie-header {
+            text-align: center;
+        }
+
+        .movie-header h1 {
+            margin: 0;
+        }
+
+        .tags {
+            margin: 10px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #eee;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+
+        .date-selector {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .date-selector button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filters select,
+        .filters button,
+        .filters input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .filters input {
+            flex-grow: 1;
+        }
+
+        .theaters {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .theater {
+            margin-bottom: 20px;
+        }
+
+        .theater h2 {
+            margin: 0 0 10px;
+        }
+
+        .showtimes button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .showtimes button:hover {
+            background-color: #45a049;
+        }
+
+        .modal {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #5b5b5bae;
+            padding: 30px;
+            border-radius: 45px;
+            text-align: center;
+            position: relative;
+            max-width: 350px;
+            width: 100%;
+            color: #4b8aef;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #1e1e1e1c;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 100px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .google {
+
+            color: #ffffff00;
+        }
+
+        .email {
+
+            color: #fff;
+        }
+
+        .apple {
+
+            color: #fff;
+        }
+
+        .mobile {
+            background-color: #b0efbed2;
+            color: #fff;
+        }
+
+        .social-button img {
+            margin-right: 0px;
+        }
+
+        .divider {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        p {
+            font-size: 12px;
+            color: #888;
+        }
+
+        p a {
+            color: #4285F4;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #fa5b5b;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: -35%;
+            width: 100%;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 10px;
+            transition: color 0.3s;
+            font-size: 150%;
+        }
+
+        .icons a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<header>
+    <h1> <img class="test2" src="img/logo-removebg-preview.png" alt="Logo" width="4%"> <i>సినిమా చూపిస్త మావ</i></h1>
+    <nav class="test">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="showtime.html">Showtimes</a></li>
+            <li><a href="promotion.html">Promotions</a></li>
+            <li><input type="text" placeholder="Search Movies..." class="search-bar" id="movieSearch"></li>
+            <li><input type="text" placeholder="Search Location..." class="search-bar" id="locationSearch"></li>
+            <li class="test1"><i class="fa fa-user" id="userIcon" style="font-size:30px"><a href=""></a></i></li>
+        </ul>
+    </nav>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <h2>LOGIN </h2>
+            <button class="social-button google"><img src="img/goog.png" alt="Google" width="50px"> </button>
+            <button class="social-button email"><img src="img/mail.png" alt="Email" width="50px"> </button>
+            <button class="social-button apple"><img src="img/ios.png" alt="Apple" width="50px"></button>
+            <div class="divider">OR</div>
+            <!-- <button class="social-button mobile"><img src="img/india.png" alt="India" width="50px"> +91 </button> -->
+            <p>I agree to the <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="movie-header">
+            <div class="tags">
+                <span class="tag">UA</span>
+                <span class="tag">Action</span>
+                <span class="tag">Sci-Fi</span>
+                <span class="tag">Thriller</span>
+            </div>
+        </div>
+        <div class="date-selector">
+            <button>THU 11 JUL</button>
+            <button>FRI 12 JUL</button>
+            <button>SAT 13 JUL</button>
+            <button>SUN 14 JUL</button>
+            <button>MON 15 JUL</button>
+            <button>TUE 16 JUL</button>
+        </div>
+        <div class="filters">
+            <div class="section">
+                <label for="format">Select Format:</label>
+                <select id="format">
+                    <option value="2D">2D</option>
+                    <option value="3D">3D</option>
+                    <option value="IMAX">IMAX</option>
+                </select>
+            </div>
+            <input type="search" placeholder="Search">
+        </div>
+        <div class="theaters">
+            <div class="theater">
+                <h2>Siraj Cinemas: Nilapuram</h2>
+                <div class="showtimes">
+                    <button>06:15 PM</button>
+                    <button>10:00 PM</button>
+                </div>
+            </div>
+            <div class="theater">
+                <h2>TINOX: GVV Mall</h2>
+                <div class="showtimes">
+                    <button>07:05 PM</button>
+                    <button>10:50 PM</button>
+                </div>
+            </div>
+            <div class="theater">
+                <h2>BP Cinemas: Bandanagar</h2>
+                <div class="showtimes">
+                    <button>10:45 PM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Movie Booking Website</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+<script>
+    document.getElementById('userIcon').addEventListener('click', function () {
+        document.getElementById('modal').style.display = 'flex';
+    });
+
+    document.getElementById('closeButton').addEventListener('click', function () {
+        document.getElementById('modal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target == document.getElementById('modal')) {
+            document.getElementById('modal').style.display = 'none';
+        }
+    });
+</script>
+
+
+</html>

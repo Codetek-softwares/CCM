@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SHOW</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+</head>
+
+<body>
+    <header>
+        
+        <h1> <img class="test2" src="img/logo-removebg-preview.png" alt="Logo" width="4%"> <i>సినిమా చూపిస్త మావ</i></h1>
+        <nav class="test">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showtime.html">Showtimes</a></li>
+                <li><a href="promotion.html">Promotions</a></li>
+                <li><input type="text" placeholder="Search Movies..." class="search-bar" id="movieSearch"></li>
+                <li><input type="text" placeholder="Search Location..." class="search-bar" id="locationSearch"></li>
+                <li class="test1"><i class="fa fa-user" id="userIcon" style="font-size:30px"><a href=""></a></i></li>
+            </ul>
+        </nav>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-button" id="closeButton">&times;</span>
+                <h2>LOGIN </h2>
+                <button class="social-button google"><img src="img/goog.png" alt="Google" width="50px"> </button>
+                <button class="social-button email"><img src="img/mail.png" alt="Email" width="50px"> </button>
+                <button class="social-button apple"><img src="img/ios.png" alt="Apple" width="50px"></button>
+                <div class="divider">OR</div>
+                <!-- <button class="social-button mobile"><img src="img/india.png" alt="India" width="50px"> +91 </button> -->
+                <p>I agree to the <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="movie-list">
+            <div class="movie">
+                <img src="img/01.jpg" alt="Movie Poster">
+                <div class="movie-details">
+                    <h3>KALKI 2898 AD</h3>
+                    <p>Genre: Action</p>
+                    <p>Language: Telugu,Hindi,English</p>
+                    <button><a href="book.html" style="text-decoration: none ;">Book Now</a></button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/02.jpg" alt="Movie Poster" style="width: 100%; height: 64%;">
+                <div class="movie-details">
+                    <h3>KARNAN</h3>
+                    <p>Genre: Action</p>
+                    <p>Language: Telugu,Hindi,English</p>
+                    <button><a href="book.html" style="text-decoration: none ;">Book Now</a></button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/03.jpg" alt="Movie Poster" style="width: 100%; height: 64%;">
+                <div class="movie-details">
+                    <h3>ROBO</h3>
+                    <p>Genre: Action</p>
+                    <p>Language: Telugu,Hindi,English</p>
+                    <button><a href="book.html" style="text-decoration: none ;">Book Now</a></button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/04.jpg" alt="Movie Poster">
+                <div class="movie-details">
+                    <h3>GOT</h3>
+                    <p>Genre: Action</p>
+                    <p>Language: Telugu,Hindi,English</p>
+                    <button><a href="book.html" style="text-decoration: none ;">Book Now</a></button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/05.jpg" alt="Movie Poster" style="width: 100%; height: 64%;">
+                <div class="movie-details">
+                    <h3>HANUMAN</h3>
+                    <p>Genre: Action</p>
+                    <p>Language: Telugu,Hindi,English</p>
+                    <button><a href="book.html" style="text-decoration: none ;">Book Now</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img/06.jpg" alt="Image" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img/07.jpg" alt="Image" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img/08.jpg" alt="Image" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img/09.jpg" alt="Image" style="width:100%">
+
+            </div>
+            <!-- <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img5.jpg" alt="Image" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div> -->
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <!-- <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div> -->
+    </main>
+
+    <!-- pop up LOGIN -->
+
+    <script>
+        document.getElementById('userIcon').addEventListener('click', function () {
+            document.getElementById('modal').style.display = 'flex';
+        });
+
+        document.getElementById('closeButton').addEventListener('click', function () {
+            document.getElementById('modal').style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == document.getElementById('modal')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- slideshow-container -->
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Movie Booking Website</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

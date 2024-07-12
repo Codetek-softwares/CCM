@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SHOW</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+</head>
+
+<body>
+    <header>
+        <h1> <img class="test2" src="img/logo-removebg-preview.png" alt="Logo" width="4%"> <i>సినిమా చూపిస్త మావ</i></h1>
+        <nav class="test">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showtime.html">Showtimes</a></li>
+                <li><a href="promotion.html">Promotions</a></li>
+                <li><input type="text" placeholder="Search Movies..." class="search-bar" id="movieSearch"></li>
+                <li><input type="text" placeholder="Search Location..." class="search-bar" id="locationSearch"></li>
+                <li class="test1"><i class="fa fa-user" id="userIcon" style="font-size:30px"><a href=""></a></i></li>
+            </ul>
+        </nav>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-button" id="closeButton">&times;</span>
+                <h2>LOGIN </h2>
+                <button class="social-button google"><img src="img/goog.png" alt="Google" width="50px"> </button>
+                <button class="social-button email"><img src="img/mail.png" alt="Email" width="50px"> </button>
+                <button class="social-button apple"><img src="img/ios.png" alt="Apple" width="50px"></button>
+                <div class="divider">OR</div>
+                <!-- <button class="social-button mobile"><img src="img/india.png" alt="India" width="50px"> +91 </button> -->
+                <p>I agree to the <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </header>
+    <style>
+        main {
+            padding: 40px;
+        }
+
+        .section {
+            background-color: #ffffff32;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .section h2,
+        .section h3 {
+            color: #007bff;
+        }
+
+        .section p {
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .cards {
+            display: flex;
+            overflow-x: auto;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f95a;
+            border-radius: 8px;
+            padding: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #007bff;
+        }
+
+        .card p {
+            color: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
+    <main>
+        <div id="eligibility-requirements" class="section">
+            <div class="cards">
+                <div class="card">
+                    <img src="img/11.PNG" alt="IMAGE1">
+                </div>
+                <div class="card">
+                    <img src="img/22.PNG" alt="IMAGE2">
+                </div>
+                <div class="card">
+                    <img src="img/33.PNG" alt="IMAGE3">
+                </div>
+                <div class="card">
+                    <img src="img/55.PNG" alt="IMAGE4" width="90%">
+                </div>
+                <div class="card">
+                    <img src="img/66.PNG" alt="IMAGE4">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Container for the image gallery -->
+    <div class="container">
+        <!-- Thumbnail images -->
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="img/12.avif" style="width:20%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/23.webp" style="width:20%" onclick="currentSlide(2)"
+                    alt="Cinque Terre">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/34.jpg" style="width:20%" onclick="currentSlide(3)"
+                    alt="Mountains and fjords">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/45.jpg" style="width:20%" onclick="currentSlide(4)"
+                    alt="Northern Lights">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/56.jpg" style="width:20%" onclick="currentSlide(5)"
+                    alt="Nature and sunrise">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/67.jpg" style="width:20%" onclick="currentSlide(6)"
+                    alt="Snowy Mountains">
+            </div>
+        </div>
+        
+    <!-- pop up LOGIN -->
+
+    <script>
+        document.getElementById('userIcon').addEventListener('click', function () {
+            document.getElementById('modal').style.display = 'flex';
+        });
+
+        document.getElementById('closeButton').addEventListener('click', function () {
+            document.getElementById('modal').style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == document.getElementById('modal')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 Movie Booking Website</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
